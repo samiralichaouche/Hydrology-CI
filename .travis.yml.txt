@@ -1,1 +1,5 @@
 language: python
+
+deploy:
+  on:
+    branch: master
