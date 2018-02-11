@@ -1,0 +1,5 @@
+station_id, angle_degrees,angle_cosine
+0,90,0.0
+1,60,0.5000000000000001
+2,30,0.866
+3,0,1.0
