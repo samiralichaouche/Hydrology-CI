@@ -1,1 +1,1 @@
-Need to install wget
+sudo pip install wget
