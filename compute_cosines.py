@@ -4,7 +4,7 @@ import csv
 import math
 
 def compute_cosines(inputcsv):
-    with open(inputcsv,'rt') as f:
+    with open(inputcsv,'rb') as f:
         csv_reader = csv.reader(f)
         
         header = next(csv_reader)
