@@ -1,1 +1,1 @@
-sudo pip install wget
+pip install wget
