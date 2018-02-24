@@ -1,4 +1,5 @@
 import csv
+import sys
 
 def comp_csv(inputcsv,outputcsv):
     """(compare two csv files given as arguments, w/ non-zero exit code if the files are not same)"""
@@ -19,5 +20,10 @@ def comp_csv(inputcsv,outputcsv):
                 if (input_row != output_row):
                     return -1
                 count = 1
-            return 0
-    return 0
+            return 1
+    return 1
+
+def main():
+    print(comp_csv(sys.argv[1], sys.argv[2]))
+
+main()
