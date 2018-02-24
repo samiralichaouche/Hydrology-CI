@@ -20,7 +20,7 @@ python $computedir $input_path $output_path
 compdir=$cwd
 compdir+="/tst_comp_csv.py"
 
-#Compare the csv files and output result (1 = same, -1 = different)
+#Compare the csv files and output result
 python $compdir output.csv angles_UCI_CS_out.csv
 
 #Remove extra files

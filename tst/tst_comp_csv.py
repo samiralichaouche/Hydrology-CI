@@ -18,12 +18,18 @@ def comp_csv(inputcsv,outputcsv):
                     for i in range(len(output_row)):
                         output_row[i] = round(float(output_row[i]),3)
                 if (input_row != output_row):
-                    return -1
+                    return 0
                 count = 1
             return 1
     return 1
 
 def main():
-    print(comp_csv(sys.argv[1], sys.argv[2]))
+    val = comp_csv(sys.argv[1], sys.argv[2])
+    if (val == 0):
+        print("csvs are not same")
+        sys.exit(1)
+    if (val == 1):
+        print("csvs are same")
+        sys.exit(0)
 
 main()
