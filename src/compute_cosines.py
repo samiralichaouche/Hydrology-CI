@@ -2,8 +2,9 @@
 
 import csv
 import math
+import sys
 
-def compute_cosines(inputcsv):
+def compute_cosines(inputcsv, outputcsv):
     with open(inputcsv,'rb') as f:
         csv_reader = csv.reader(f)
         
@@ -21,7 +22,12 @@ def compute_cosines(inputcsv):
                 cos = round(cos,3)
             iddeg.append([station_id,deg,cos])
 
-        outputFile = open('output_tst.csv','wb')
+        outputFile = open(outputcsv,'wb')
         with outputFile:
             writer = csv.writer(outputFile)
             writer.writerows(iddeg)
+
+def main():
+    compute_cosines(sys.argv[1], sys.argv[2])
+
+main()

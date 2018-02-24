@@ -6,4 +6,4 @@ install:
   - pip install -r requirements.txt
 
 script: 
-  - bash tst_repr.sh
+  - bash tst/tst_repr.sh
