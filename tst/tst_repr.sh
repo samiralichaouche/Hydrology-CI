@@ -14,7 +14,7 @@ computedir+="/src/compute_cosines.py"
 sh tst/tst_dwnl.sh
 
 #Run compute cosines to generate output csv file
-python $computedir $input_path $output_path
+python ./src/compute_cosines.py $input_path $output_path
 
 #Create Path for comp_csv
 compdir=$cwd
