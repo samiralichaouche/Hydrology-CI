@@ -32,9 +32,7 @@ install:
 #-------------------------------------------------------------------------------
 #Specific to OSX
 #-------------------------------------------------------------------------------
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip install $(grep numpy osx_requirements.pip) ; fi
-    # HDF5 header not found
-    #- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip install -r osx_requirements.pip ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip install $(grep numpy requirements.pip) ; fi
 
 script: 
   - ./tst/tst_repr.sh
