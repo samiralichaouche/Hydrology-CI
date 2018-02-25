@@ -25,12 +25,11 @@ def comp_csv(inputcsv,outputcsv):
 
 def main():
     val = comp_csv(sys.argv[1], sys.argv[2])
-    sys.exit(0)
-    #if (val == 0):
-    #    print("csvs are not same")
-    #    sys.exit(1)
-    #if (val == 1):
-    #    print("csvs are same")
-    #    sys.exit(0)
+    if (val == 0):
+        print("csvs are not same")
+        sys.exit(1)
+    if (val == 1):
+        print("csvs are same")
+        sys.exit(0)
 
 main()
