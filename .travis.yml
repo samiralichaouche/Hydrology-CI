@@ -32,7 +32,7 @@ install:
 #-------------------------------------------------------------------------------
 #Specific to OSX
 #-------------------------------------------------------------------------------
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip install $(grep numpy requirements.pip) ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip install $(grep numpy os_requirements.pip) ; fi
 
 script: 
   - ./tst/tst_repr.sh

@@ -1,0 +1,5 @@
+numpy==1.8.0rc1
+netCDF4==1.0.8
+fiona==1.6.3.post1
+shapely==1.5.15
+rtree==0.6.0
