@@ -21,7 +21,7 @@ compdir=$cwd
 compdir+="/tst_comp_csv.py"
 
 #Compare the csv files and output result
-python $compdir output.csv angles_UCI_CS_out.csv
+python ./tst/tst_comp_csv.py output.csv angles_UCI_CS_out.csv
 
 #Remove extra files
 rm *.csv
