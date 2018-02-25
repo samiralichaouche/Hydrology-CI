@@ -6,9 +6,9 @@ input_path="$cwd/angles_UCI_CS.csv"
 output_path="$cwd/output.csv"
 
 #Create Path for compute_cosines
-parentdir="$(dirname "$cwd")"
-computedir=$parentdir
-computedir+="/src/compute_cosines.py"
+#parentdir="$(dirname "$cwd")"
+#computedir=$parentdir
+#computedir+="/src/compute_cosines.py"
 
 #Download csv files
 sh tst/tst_dwnl.sh
@@ -17,8 +17,8 @@ sh tst/tst_dwnl.sh
 python ./src/compute_cosines.py $input_path $output_path
 
 #Create Path for comp_csv
-compdir=$cwd
-compdir+="/tst_comp_csv.py"
+#compdir=$cwd
+#compdir+="/tst_comp_csv.py"
 
 #Compare the csv files and output result
 python ./tst/tst_comp_csv.py output.csv angles_UCI_CS_out.csv
