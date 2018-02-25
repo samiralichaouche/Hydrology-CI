@@ -1,8 +1,19 @@
 version: 1.0.{build}
 
-branches:
-  only:
-    - master
+build: false
+
+environment:
+  matrix:
+    - PYTHON: "C:\\Python36"
+
+install:
+  - ps: choco install (get-content requirements.win)
+
+  # Install numpy first to avoid numpy unfound
+  - ps: pip install (Select-String -Pattern numpy requirements.pip | Select-Object -ExpandProperty Line)
+ 
+  # TODO: HDF5 header is not found
+  # - ps: pip install -r requirements.pip
 
 test_script:
   - ps: sh tst/tst_repr.sh
