@@ -23,8 +23,11 @@ before_install:
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew reinstall $(grep -v -E '(^#|^$)' requirements.brw) ; fi
 
 install:
-- sudo pip install $(grep numpy requirements.pip)
-- sudo pip install -r requirements.pip
+#-------------------------------------------------------------------------------
+#Specific to Linux
+#-------------------------------------------------------------------------------
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo pip install $(grep numpy requirements.pip) ; fi  
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo pip install -r requirements.pip ; fi
 
 script: 
   - ./tst/tst_repr.sh
