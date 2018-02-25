@@ -7,11 +7,15 @@ matrix:
     - os: osx
          
 before_install:
-  # Linux
+#-------------------------------------------------------------------------------
+#Specific to Linux
+#-------------------------------------------------------------------------------
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then apt-get --version ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y $(grep -v -E '(^#|^$)' requirements.apt) ; fi
 
-  # OSX
+#-------------------------------------------------------------------------------
+#Specific to OSX
+#-------------------------------------------------------------------------------
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew --version ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then sudo easy_install pip ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew tap homebrew/core ; fi
@@ -19,11 +23,15 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew reinstall $(grep -v -E '(^#|^$)' requirements.brw) ; fi
 
 install:
-  # Linux
+#-------------------------------------------------------------------------------
+#Specific to Linux
+#-------------------------------------------------------------------------------
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo pip install $(grep numpy requirements.pip) ; fi  
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo pip install -r requirements.pip ; fi
 
-  # OSX
+#-------------------------------------------------------------------------------
+#Specific to OSX
+#-------------------------------------------------------------------------------
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip install $(grep numpy osx_requirements.pip) ; fi
     # HDF5 header not found
     #- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip install -r osx_requirements.pip ; fi
