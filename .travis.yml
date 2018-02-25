@@ -28,6 +28,5 @@ install:
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo pip install $(grep numpy requirements.pip) ; fi  
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo pip install -r requirements.pip ; fi
 
-
 script: 
   - ./tst/tst_repr.sh
