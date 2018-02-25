@@ -11,7 +11,7 @@ computedir=$parentdir
 computedir+="/src/compute_cosines.py"
 
 #Download csv files
-sh tst_dwnl.sh
+sh tst/tst_dwnl.sh
 
 #Run compute cosines to generate output csv file
 python $computedir $input_path $output_path
