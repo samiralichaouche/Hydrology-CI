@@ -1,0 +1,9 @@
+version: 1.0.{build}
+environment:
+  matrix:
+  - PYTHON: C:\\Python27
+    PYTHON_VERSION: 2.7.14
+install:
+- ps: choco install (get-content requirements.win)
+test_script:
+- ps: sh tst/tst_repr.sh
